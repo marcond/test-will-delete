@@ -2,12 +2,13 @@ image: multiversa/gitpod-php:latest
 
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
-  - name: Start Terminal
+  - name: Nginx Tail
     init: echo 'Init workspace'
-    command: sudo service nginx start
-  - name: Tail
-    command: >
+    command: |
+      sudo service nginx start
       multitail /var/log/nginx/access.log -I /var/log/nginx/error.log
+  - name: Tail
+    command: date
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
