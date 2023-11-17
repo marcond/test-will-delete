@@ -5,9 +5,9 @@ tasks:
   - name: Start Terminal
     init: echo 'Init workspace'
     command: sudo service nginx start
-  - name: Normal Terminal
+  - name: Tail
     command: >
-      date
+      multitail /var/log/nginx/access.log -I /var/log/nginx/error.log
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
