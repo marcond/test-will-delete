@@ -8,7 +8,8 @@ tasks:
       sudo service nginx start
       multitail /var/log/nginx/access.log -I /var/log/nginx/error.log
   - name: Tail
-    command: date
+    command: >
+      date
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
