@@ -14,8 +14,8 @@ tasks:
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
   - name: Frontend
-    description: Port 8080 for the frontend
-    port: 8080
+    description: Port 80 for the frontend
+    port: 80
     onOpen: open-preview
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
