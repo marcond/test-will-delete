@@ -3,8 +3,8 @@ image: multiversa/gitpod-php:latest
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
   - name: Start Terminal
-    init: service nginx start
-    command: echo 'start script'
+    init: echo 'Init workspace'
+    command: service nginx start
   - name: Normal Terminal
     command: date
 
