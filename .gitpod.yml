@@ -7,7 +7,7 @@ tasks:
     env:
       NGINX_DOCROOT_IN_REPO: 'public'
     command: |
-      sudo php8.1-fpm start &&
+      sudo service php8.1-fpm start &&
       sudo -E nginx &&
       sudo multitail -f /var/log/nginx/access.log -I /var/log/nginx/error.log
   - name: Console
