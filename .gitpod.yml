@@ -9,7 +9,7 @@ tasks:
     command: |
       sudo php8.1-fpm start &&
       sudo -E nginx &&
-      multitail -f /var/log/nginx/access.log -I /var/log/nginx/error.log
+      sudo multitail -f /var/log/nginx/access.log -I /var/log/nginx/error.log
   - name: Console
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
