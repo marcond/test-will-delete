@@ -19,4 +19,6 @@ ports:
     port: 80
     onOpen: open-preview
 
-# Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
+vscode:
+    extensions:
+        - rangav.vscode-thunder-client
