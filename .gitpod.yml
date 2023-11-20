@@ -2,7 +2,9 @@ image: multiversa/gitpod-php:latest
 
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
+  - name: Console
   - name: Nginx
+    openMode: split-right
     init: echo 'Init workspace'
     env:
       NGINX_DOCROOT_IN_REPO: 'public'
@@ -10,7 +12,6 @@ tasks:
       sudo service php8.1-fpm start &&
       sudo -E nginx &&
       sudo multitail -f /var/log/nginx/access.log -I /var/log/nginx/error.log
-  - name: Console
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
 ports:
@@ -20,5 +21,10 @@ ports:
     onOpen: open-preview
 
 vscode:
-    extensions:
-        - rangav.vscode-thunder-client
+  extensions:
+    - rangav.vscode-thunder-client
+    - ms-azuretools.vscode-docker
+    - bmewburn.vscode-intelephense-client
+    - redhat.vscode-xml
+    - cweijan.vscode-mysql-client2
+    - felixfbecker.php-debug
